@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="32dp">
+
+        <!-- Header with ellipse + avatar -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="230dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_gravity="top"
+                android:scaleType="fitXY"
+                android:src="@drawable/header_ellipse"
+                android:contentDescription="@null" />
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/bg_circle_white"
+                android:elevation="2dp"
+                android:padding="11dp"
+                android:src="@drawable/ic_arrow_left"
+                android:contentDescription="@null" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="136dp"
+                android:layout_height="136dp"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_marginTop="92dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="68dp"
+                app:cardElevation="6dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:padding="6dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/mascot_fox"
+                    android:contentDescription="@null" />
+            </androidx.cardview.widget.CardView>
+        </FrameLayout>
+
+        <!-- Name -->
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:text="Tiny Guz"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <!-- Level badge -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_chip_inactive"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="14dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_badge"
+                app:tint="@color/primary_600"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Bibliophile Level 4"
+                android:textColor="@color/primary_600"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Bio -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:lineSpacingExtra="3dp"
+            android:text="Avid reader of timeless classics. Exploring world literature one page at a time, always hunting for the next great story."
+            android:textColor="@color/gray"
+            android:textSize="13sp" />
+
+        <!-- Stats card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_facility_chip"
+            android:orientation="horizontal"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <LinearLayout style="@style/Stat.Cell">
+                <TextView style="@style/Stat.Number" android:text="12" />
+                <TextView style="@style/Stat.Label" android:text="Books Read" />
+            </LinearLayout>
+
+            <View style="@style/Stat.Divider" />
+
+            <LinearLayout style="@style/Stat.Cell">
+                <TextView style="@style/Stat.Number" android:text="8" />
+                <TextView style="@style/Stat.Label" android:text="Reviews" />
+            </LinearLayout>
+
+            <View style="@style/Stat.Divider" />
+
+            <LinearLayout style="@style/Stat.Cell">
+                <TextView style="@style/Stat.Number" android:text="5" />
+                <TextView style="@style/Stat.Label" android:text="Wishlist" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Account Info -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Account Info"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_facility_chip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="14dp">
+
+            <FrameLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_icon_square">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_location"
+                    app:tint="@color/primary_600"
+                    android:contentDescription="@null" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Address"
+                    android:textColor="@color/gray"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Jl. Sumur Batu Kab. Bogor"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Log Out -->
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/bg_logout_button"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:stateListAnimator="@null"
+            android:text="@string/logout"
+            android:textAllCaps="false"
+            android:textColor="@color/error_600"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
