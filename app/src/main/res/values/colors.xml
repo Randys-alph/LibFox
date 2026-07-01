@@ -1,5 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Neutral (exact Figma tokens) -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="dark_gray">#666666</color>
+    <color name="gray">#8E8E93</color>          <!-- Grays/Gray -->
+    <color name="gray_a5">#A5A5A8</color>       <!-- Gray -->
+    <color name="gray_4">#D1D1D6</color>        <!-- Grays/Gray 4 -->
+    <color name="gray_6">#F2F2F7</color>        <!-- Grays/Gray 6 -->
+    <color name="light_gray">#D9D9D9</color>
+
+    <!-- Primary (Orange) — 9 shades -->
+    <color name="primary_900">#662900</color>
+    <color name="primary_800">#993E01</color>
+    <color name="primary_700">#CC5301</color>
+    <color name="primary_600">#FF6801</color>
+    <color name="primary_500">#FF8634</color>
+    <color name="primary_400">#FFA467</color>
+    <color name="primary_300">#FFC299</color>
+    <color name="primary_200">#FFE1CC</color>
+    <color name="primary_100">#FFF0E6</color>
+
+    <!-- Primary aliases (backward compat) -->
+    <color name="primary">#FF6801</color>
+    <color name="primary_light">#FF8634</color>
+    <color name="primary_dark">#662900</color>
+    <color name="primary_very_light">#FFE1CC</color>
+    <color name="primary_extra_light">#FFF0E6</color>
+
+    <!-- Secondary (Blue) — 9 shades -->
+    <color name="secondary_900">#002660</color>
+    <color name="secondary_800">#013A91</color>
+    <color name="secondary_700">#014EC1</color>
+    <color name="secondary_600">#0162F1</color>
+    <color name="secondary_500">#1A74FF</color>
+    <color name="secondary_400">#4D91FF</color>
+    <color name="secondary_300">#80B2FF</color>
+    <color name="secondary_200">#B8D5FF</color>
+    <color name="secondary_100">#E1EDFF</color>
+
+    <!-- Secondary aliases -->
+    <color name="secondary">#0162F1</color>
+    <color name="secondary_light">#1A74FF</color>
+
+    <!-- Warning (Yellow) — 8 shades -->
+    <color name="warning_700">#CC9800</color>
+    <color name="warning_600">#FFBE00</color>
+    <color name="warning_500">#FFD52E</color>
+    <color name="warning_400">#FFD659</color>
+    <color name="warning_300">#FFDD77</color>
+    <color name="warning_200">#FFE69C</color>
+    <color name="warning_100">#FFF0C3</color>
+    <color name="warning_50">#FFF8DC</color>
+
+    <!-- Success (Green) — 8 shades -->
+    <color name="success_700">#299B3F</color>
+    <color name="success_600">#2FB248</color>
+    <color name="success_500">#4EC565</color>
+    <color name="success_400">#70D583</color>
+    <color name="success_300">#89E79C</color>
+    <color name="success_200">#B1F5BF</color>
+    <color name="success_100">#D1FFDA</color>
+    <color name="success_50">#E4FFE9</color>
+
+    <!-- Success alias -->
+    <color name="success">#2FB248</color>
+
+    <!-- Error (Red) — 8 shades -->
+    <color name="error_700">#E22629</color>
+    <color name="error_600">#F83F3F</color>
+    <color name="error_500">#EB6F70</color>
+    <color name="error_400">#F49B98</color>
+    <color name="error_300">#FFCCD2</color>
+    <color name="error_200">#FFEBEE</color>
+    <color name="error_100">#FEF2F2</color>
+    <color name="error_50">#FFF9F9</color>
+
+    <!-- Semantic / UI -->
+    <color name="text_primary">#121212</color>
+    <color name="text_secondary">#666666</color>
+    <color name="text_hint">#A5A5A8</color>
+    <color name="background">#FFFFFF</color>
+    <color name="background_light">#FFF0E6</color>
+    <color name="star_yellow">#FFBE00</color>      <!-- Warning/Warning 600 -->
+    <color name="gray_border">#D1D1D6</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="divider">#EFEFF4</color>
+    <color name="overlay_dark">#80000000</color>
+    <color name="status_green">#34C759</color>
+    <color name="header_orange">#FFA467</color>   <!-- Primary/Primary 400 -->
+    <color name="search_bg">#F2F2F7</color>
 </resources>
