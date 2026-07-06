@@ -11,24 +11,25 @@
     <string name="label_password">Password</string>
     <string name="btn_login">Login</string>
     <string name="forgot_password">Forgot Password?</string>
-    <string name="no_account">Don\'t have an account? Sign Up</string>
+    <string name="no_account">Don\'t have an account? <b>Sign Up</b></string>
     <string name="or_with">Or with</string>
 
     <!-- Validation errors -->
-    <string name="error_username_empty">Username harus diisi</string>
-    <string name="error_password_empty">Password harus diisi</string>
-    <string name="error_password_format">Password harus alphanumeric</string>
-    <string name="error_address_empty">Alamat harus diisi</string>
-    <string name="error_phone_empty">Nomor telepon harus diisi</string>
-    <string name="error_phone_format">Nomor telepon harus berupa angka</string>
+    <string name="error_username_empty">Username cannot be empty</string>
+    <string name="error_password_empty">Password cannot be empty</string>
+    <string name="error_password_format">Password must be alphanumeric</string>
+    <string name="error_address_empty">Address cannot be empty</string>
+    <string name="error_phone_empty">Phone Number cannot be empty</string>
+    <string name="error_phone_format">Phone Number must be number</string>
 
     <!-- Home -->
+    <string name="greeting_format">Hi, %1$s</string>
     <string name="search_hint">Search</string>
     <string name="featured_books">Featured Books</string>
     <string name="see_all">See All →</string>
-    <string name="filter_all">All</string>
-    <string name="filter_fiction">Fiction</string>
-    <string name="filter_nonfiction">Non-Fiction</string>
+    <string name="filter_all">ALL</string>
+    <string name="filter_fiction">FICTION</string>
+    <string name="filter_nonfiction">NON-FICTION</string>
 
     <!-- Books -->
     <string name="section_fiction">FICTION</string>
@@ -51,15 +52,15 @@
     <string name="shipping">Shipping</string>
     <string name="shipping_free">FREE</string>
     <string name="total_price">Total Price</string>
-    <string name="success_order">Email konfirmasi telah dikirim ke email Anda</string>
+    <string name="success_order">Email confirmation has been sent to your address</string>
     <string name="dialog_error_title">Error</string>
-    <string name="dialog_success_title">Sukses</string>
+    <string name="dialog_success_title">Success</string>
     <string name="dialog_ok">OK</string>
 
     <!-- Log Out -->
     <string name="logout">Log Out</string>
-    <string name="logout_confirm">Yakin ingin keluar?</string>
-    <string name="cancel">Batal</string>
+    <string name="logout_confirm">Sure you want to log out?</string>
+    <string name="cancel">Cancel</string>
 
     <!-- Navigation -->
     <string name="nav_home">Home</string>
@@ -74,7 +75,7 @@
     <string name="label_confirm_password">Confirm Password</string>
     <string name="terms_agree">I agree to the Terms of Service and Privacy Policy</string>
     <string name="btn_signup">Sign Up</string>
-    <string name="have_account">Already have an account? Sign In</string>
+    <string name="have_account">Already have an account? <b>Sign In</b></string>
     <string name="sign_in_google">Sign in with Google</string>
     <string name="sign_in_apple">Sign in with Apple</string>
     <string name="sign_up_google">Sign up with Google</string>

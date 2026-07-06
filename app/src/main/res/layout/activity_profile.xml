@@ -208,21 +208,28 @@
         </LinearLayout>
 
         <!-- Log Out -->
-        <Button
+        <!-- Log Out Button -->
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_logout"
             android:layout_width="match_parent"
             android:layout_height="52dp"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
             android:layout_marginTop="28dp"
-            android:background="@drawable/bg_logout_button"
+            android:backgroundTint="@color/white"
+            app:strokeColor="@color/primary_600"
+            app:strokeWidth="2dp"
+            app:cornerRadius="12dp"
             android:fontFamily="@font/poppins_bold"
-            android:gravity="center"
-            android:stateListAnimator="@null"
             android:text="@string/logout"
             android:textAllCaps="false"
-            android:textColor="@color/error_600"
-            android:textSize="15sp" />
+            android:textColor="@color/primary_600"
+            android:textSize="15sp"
+            app:icon="@drawable/ic_logout"
+            app:iconGravity="textStart"
+            app:iconPadding="8dp"
+            app:iconTint="@color/primary_600"
+            android:stateListAnimator="@null" />
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

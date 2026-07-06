@@ -20,12 +20,17 @@ public class CarouselAdapter extends RecyclerView.Adapter<CarouselAdapter.Carous
 
     private final Context context;
     private final List<Integer> imageResIds;
-    private final List<String> captions;
+    private final List<String> locations;
+    private final List<String> shortTitles;
+    private final List<String> longDescs;
 
-    public CarouselAdapter(Context context, List<Integer> imageResIds, List<String> captions) {
+    // Tambahkan variabel baru ke dalam constructor
+    public CarouselAdapter(Context context, List<Integer> imageResIds, List<String> locations, List<String> shortTitles, List<String> longDescs) {
         this.context = context;
         this.imageResIds = imageResIds;
-        this.captions = captions;
+        this.locations = locations;
+        this.shortTitles = shortTitles;
+        this.longDescs = longDescs;
     }
 
     @NonNull
@@ -37,27 +42,34 @@ public class CarouselAdapter extends RecyclerView.Adapter<CarouselAdapter.Carous
 
     @Override
     public void onBindViewHolder(@NonNull CarouselViewHolder holder, int position) {
+        int realPosition = position % imageResIds.size();
+
         Glide.with(context)
-                .load(imageResIds.get(position))
+                .load(imageResIds.get(realPosition))
                 .centerCrop()
                 .into(holder.ivSlide);
 
-        if (holder.tvCaption != null && captions != null && position < captions.size()) {
-            holder.tvCaption.setText(captions.get(position));
+        // Pasang ketiga teks ke posisinya masing-masing
+        if (locations != null && !locations.isEmpty()) {
+            holder.tvLocation.setText(locations.get(realPosition));
+            holder.tvShortTitle.setText(shortTitles.get(realPosition));
+            holder.tvLongDesc.setText(longDescs.get(realPosition));
         }
     }
 
     @Override
-    public int getItemCount() { return imageResIds.size(); }
+    public int getItemCount() { return Integer.MAX_VALUE; }
 
     static class CarouselViewHolder extends RecyclerView.ViewHolder {
         ImageView ivSlide;
-        TextView tvCaption;
+        TextView tvLocation, tvShortTitle, tvLongDesc;
 
         CarouselViewHolder(@NonNull View itemView) {
             super(itemView);
             ivSlide = itemView.findViewById(R.id.iv_slide);
-            tvCaption = itemView.findViewById(R.id.tv_caption);
+            tvLocation = itemView.findViewById(R.id.tv_location); // Binding ID baru
+            tvShortTitle = itemView.findViewById(R.id.tv_short_title); // Binding ID baru
+            tvLongDesc = itemView.findViewById(R.id.tv_long_desc); // Binding ID baru
         }
     }
 }

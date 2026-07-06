@@ -131,35 +131,59 @@ public class BookDetailActivity extends AppCompatActivity {
         String address = etAddress.getText() != null ? etAddress.getText().toString().trim() : "";
         String phone = etPhone.getText() != null ? etPhone.getText().toString().trim() : "";
 
+        // Reset error sebelumnya (jika ada)
+        etAddress.setError(null);
+        etPhone.setError(null);
+
         if (address.isEmpty()) {
-            showErrorDialog(getString(R.string.error_address_empty));
+            etAddress.setError(getString(R.string.error_address_empty));
+            etAddress.requestFocus();
             return;
         }
 
         if (phone.isEmpty()) {
-            showErrorDialog(getString(R.string.error_phone_empty));
+            etPhone.setError(getString(R.string.error_phone_empty));
+            etPhone.requestFocus();
             return;
         }
 
         if (!NUMERIC.matcher(phone).matches()) {
-            showErrorDialog(getString(R.string.error_phone_format));
+            etPhone.setError(getString(R.string.error_phone_format));
+            etPhone.requestFocus();
             return;
         }
 
-        new AlertDialog.Builder(this)
-                .setTitle(getString(R.string.dialog_success_title))
-                .setMessage(getString(R.string.success_order))
-                .setPositiveButton(getString(R.string.dialog_ok), (dialog, which) -> finish())
-                .setCancelable(false)
-                .show();
-    }
+        // 1. Panggil dialog dari XML (inflate) layout
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_order_success, null);
 
-    private void showErrorDialog(String message) {
-        new AlertDialog.Builder(this)
-                .setTitle(getString(R.string.dialog_error_title))
-                .setMessage(message)
-                .setPositiveButton(getString(R.string.dialog_ok), null)
-                .show();
+        // 2. Buat dialog menggunakan layout tersebut
+        AlertDialog successDialog = new AlertDialog.Builder(this)
+                .setView(dialogView)
+                .setCancelable(false)
+                .create();
+
+        // 3. Buat background window bawaan menjadi transparan
+        if (successDialog.getWindow() != null) {
+            successDialog.getWindow().setBackgroundDrawable(new android.graphics.drawable.ColorDrawable(android.graphics.Color.TRANSPARENT));
+        }
+
+        successDialog.show();
+
+        // Buat timer delay selama 3 detik (3000 ms)
+        new android.os.Handler(android.os.Looper.getMainLooper()).postDelayed(() -> {
+            // Tutup dialog jika masih terbuka
+            if (successDialog.isShowing()) {
+                successDialog.dismiss();
+            }
+
+            // Redirect langsung ke HomeActivity
+            Intent intent = new Intent(BookDetailActivity.this, HomeActivity.class);
+            // Membersihkan history halaman sebelumnya agar user tidak bisa tekan tombol 'Back' ke halaman pembayaran lagi
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            finish(); // Tutup halaman detail buku ini
+
+        }, 3000);
     }
 
     private void setupBottomNav() {

@@ -69,10 +69,37 @@ public class LoginActivity extends AppCompatActivity {
         tvForgot.setOnClickListener(v ->
                 Toast.makeText(this, "Reset link sent to your email", Toast.LENGTH_SHORT).show());
 
-        findViewById(R.id.btn_google).setOnClickListener(v ->
-                Toast.makeText(this, "Sign in with Google", Toast.LENGTH_SHORT).show());
-        findViewById(R.id.btn_apple).setOnClickListener(v ->
-                Toast.makeText(this, "Sign in with Apple", Toast.LENGTH_SHORT).show());
+        // Cari bagian ini di dalam onCreate, lalu ubah menjadi:
+
+        findViewById(R.id.btn_google).setOnClickListener(v -> {
+            // 1. Munculkan Toast
+            Toast.makeText(this, "Sign in with Google", Toast.LENGTH_SHORT).show();
+
+            // 2. Simpan session (misal nama default: "Google User") agar tidak diminta login lagi
+            getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
+                    .edit()
+                    .putString(KEY_USERNAME, "Google User")
+                    .apply();
+
+            // 3. Pindah ke Home
+            startActivity(new Intent(this, HomeActivity.class));
+            finish();
+        });
+
+        findViewById(R.id.btn_apple).setOnClickListener(v -> {
+            // 1. Munculkan Toast
+            Toast.makeText(this, "Sign in with Apple", Toast.LENGTH_SHORT).show();
+
+            // 2. Simpan session (misal nama default: "Apple User")
+            getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
+                    .edit()
+                    .putString(KEY_USERNAME, "Apple User")
+                    .apply();
+
+            // 3. Pindah ke Home
+            startActivity(new Intent(this, HomeActivity.class));
+            finish();
+        });
     }
 
     private void togglePassword() {

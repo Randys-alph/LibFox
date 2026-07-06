@@ -16,7 +16,7 @@ import com.bumptech.glide.Glide;
 import java.util.List;
 
 import pepes.co.libfox.R;
-import pepes.co.libfox.StoreDetailActivity;
+import pepes.co.libfox.StoreDetailFragment;
 import pepes.co.libfox.model.Store;
 
 public class StoresAdapter extends RecyclerView.Adapter<StoresAdapter.StoreViewHolder> {
@@ -49,10 +49,16 @@ public class StoresAdapter extends RecyclerView.Adapter<StoresAdapter.StoreViewH
                 .into(holder.ivStore);
 
         holder.itemView.setOnClickListener(v -> {
-            Intent intent = new Intent(context, StoreDetailActivity.class);
-            intent.putExtra("store", store);
-            context.startActivity(intent);
+            if (context instanceof androidx.fragment.app.FragmentActivity) {
+                // Gunakan static method newInstance di Fragment
+                StoreDetailFragment fragment = StoreDetailFragment.newInstance(store);
+
+                // Tampilkan BottomSheet
+                fragment.show(((androidx.fragment.app.FragmentActivity) context)
+                        .getSupportFragmentManager(), "StoreDetailTag");
+            }
         });
+
     }
 
     @Override
