@@ -69,6 +69,34 @@ public class StoreDetailFragment extends BottomSheetDialogFragment {
         if (store == null) return;
     }
 
+    @NonNull
+    @Override
+    public android.app.Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
+        com.google.android.material.bottomsheet.BottomSheetDialog dialog =
+                (com.google.android.material.bottomsheet.BottomSheetDialog) super.onCreateDialog(savedInstanceState);
+
+        dialog.setOnShowListener(dialogInterface -> {
+            com.google.android.material.bottomsheet.BottomSheetDialog bottomSheetDialog =
+                    (com.google.android.material.bottomsheet.BottomSheetDialog) dialogInterface;
+
+            android.view.View bottomSheet = bottomSheetDialog.findViewById(com.google.android.material.R.id.design_bottom_sheet);
+
+            if (bottomSheet != null) {
+                // Background transparan kontainer
+                bottomSheet.setBackgroundColor(android.graphics.Color.TRANSPARENT);
+
+                // Kode untuk memaksa panel langsung mentok ke atas
+                // tanpa menyembunyikan kartu yang sekarang dikunci di bawah
+                com.google.android.material.bottomsheet.BottomSheetBehavior<android.view.View> behavior =
+                        com.google.android.material.bottomsheet.BottomSheetBehavior.from(bottomSheet);
+                behavior.setSkipCollapsed(true);
+                behavior.setState(com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_EXPANDED);
+            }
+        });
+
+        return dialog;
+    }
+
     private void openMaps(Store store) {
         try {
             // Intent ini standar dan bisa digunakan di semua versi SDK yang kamu set (minSdk 26)
