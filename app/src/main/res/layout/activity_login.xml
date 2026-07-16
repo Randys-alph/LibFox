@@ -133,22 +133,22 @@
                         android:contentDescription="@null" />
                 </RelativeLayout>
 
-                <TextView
-                    android:id="@+id/tv_forgot"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="12dp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:text="@string/forgot_password"
-                    android:textColor="@color/primary_600"
-                    android:textSize="13sp" />
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_forgot"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="end"-->
+<!--                    android:layout_marginTop="12dp"-->
+<!--                    android:fontFamily="@font/poppins_medium"-->
+<!--                    android:text="@string/forgot_password"-->
+<!--                    android:textColor="@color/primary_600"-->
+<!--                    android:textSize="13sp" />-->
 
                 <Button
                     android:id="@+id/btn_login"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="40dp"
                     android:background="@drawable/btn_orange_selector"
                     android:fontFamily="@font/poppins_bold"
                     android:stateListAnimator="@null"
@@ -168,89 +168,89 @@
                     android:textColor="@color/dark_gray"
                     android:textSize="13sp" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="24dp"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:orientation="horizontal">-->
 
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="1dp"
-                        android:layout_weight="1"
-                        android:background="@color/gray_4" />
+<!--                    <View-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:background="@color/gray_4" />-->
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
-                        android:layout_marginEnd="12dp"
-                        android:fontFamily="@font/poppins_regular"
-                        android:text="@string/or_with"
-                        android:textColor="@color/gray"
-                        android:textSize="13sp" />
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="12dp"-->
+<!--                        android:layout_marginEnd="12dp"-->
+<!--                        android:fontFamily="@font/poppins_regular"-->
+<!--                        android:text="@string/or_with"-->
+<!--                        android:textColor="@color/gray"-->
+<!--                        android:textSize="13sp" />-->
 
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="1dp"
-                        android:layout_weight="1"
-                        android:background="@color/gray_4" />
-                </LinearLayout>
+<!--                    <View-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:background="@color/gray_4" />-->
+<!--                </LinearLayout>-->
 
-                <LinearLayout
-                    android:id="@+id/btn_google"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/bg_social_button"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/btn_google"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="48dp"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:background="@drawable/bg_social_button"-->
+<!--                    android:clickable="true"-->
+<!--                    android:focusable="true"-->
+<!--                    android:gravity="center"-->
+<!--                    android:orientation="horizontal">-->
 
-                    <ImageView
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:src="@drawable/ic_google_logo"
-                        android:contentDescription="@null" />
+<!--                    <ImageView-->
+<!--                        android:layout_width="18dp"-->
+<!--                        android:layout_height="18dp"-->
+<!--                        android:src="@drawable/ic_google_logo"-->
+<!--                        android:contentDescription="@null" />-->
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:fontFamily="@font/poppins_medium"
-                        android:text="@string/sign_in_google"
-                        android:textColor="@color/black"
-                        android:textSize="14sp" />
-                </LinearLayout>
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="10dp"-->
+<!--                        android:fontFamily="@font/poppins_medium"-->
+<!--                        android:text="@string/sign_in_google"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="14sp" />-->
+<!--                </LinearLayout>-->
 
-                <LinearLayout
-                    android:id="@+id/btn_apple"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_marginTop="12dp"
-                    android:background="@drawable/bg_social_button"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/btn_apple"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="48dp"-->
+<!--                    android:layout_marginTop="12dp"-->
+<!--                    android:background="@drawable/bg_social_button"-->
+<!--                    android:clickable="true"-->
+<!--                    android:focusable="true"-->
+<!--                    android:gravity="center"-->
+<!--                    android:orientation="horizontal">-->
 
-                    <ImageView
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:src="@drawable/ic_apple_logo"
-                        android:contentDescription="@null" />
+<!--                    <ImageView-->
+<!--                        android:layout_width="18dp"-->
+<!--                        android:layout_height="18dp"-->
+<!--                        android:src="@drawable/ic_apple_logo"-->
+<!--                        android:contentDescription="@null" />-->
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:fontFamily="@font/poppins_medium"
-                        android:text="@string/sign_in_apple"
-                        android:textColor="@color/black"
-                        android:textSize="14sp" />
-                </LinearLayout>
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="10dp"-->
+<!--                        android:fontFamily="@font/poppins_medium"-->
+<!--                        android:text="@string/sign_in_apple"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="14sp" />-->
+<!--                </LinearLayout>-->
 
             </LinearLayout> </LinearLayout> </ScrollView>
 </FrameLayout>

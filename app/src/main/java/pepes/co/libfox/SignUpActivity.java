@@ -51,11 +51,11 @@ public class SignUpActivity extends AppCompatActivity {
         });
         btnSignup.setOnClickListener(v -> attemptSignUp());
 
-        findViewById(R.id.tv_signin).setOnClickListener(v -> finish());
-        findViewById(R.id.btn_google).setOnClickListener(v ->
-                Toast.makeText(this, "Sign up with Google", Toast.LENGTH_SHORT).show());
-        findViewById(R.id.btn_apple).setOnClickListener(v ->
-                Toast.makeText(this, "Sign up with Apple", Toast.LENGTH_SHORT).show());
+//        findViewById(R.id.tv_signin).setOnClickListener(v -> finish());
+//        findViewById(R.id.btn_google).setOnClickListener(v ->
+//                Toast.makeText(this, "Sign up with Google", Toast.LENGTH_SHORT).show());
+//        findViewById(R.id.btn_apple).setOnClickListener(v ->
+//                Toast.makeText(this, "Sign up with Apple", Toast.LENGTH_SHORT).show());
     }
 
     private void attemptSignUp() {
